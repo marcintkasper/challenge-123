@@ -2,5 +2,8 @@
   "name": "challenge-123",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build":"node ./scripts/build-from-source.js"
+  }
 }
