@@ -1,0 +1,38 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+th {
+    padding: 1rem;
+    border: 1px solid gray;
+}
+
+td {
+    padding: 1rem;
+    border: 1px solid gray;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
