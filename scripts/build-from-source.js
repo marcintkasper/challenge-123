@@ -36,7 +36,7 @@ const genHomePageWithLinks = async () => {
     const pageInfoArray = await Promise.all(pages.map(async (e) => await getPageInfo(e)));
 
     const tableStart = `<table><thead><tr><th>Day</th><th>Title</th><th>Prompt</th></tr></thead><tbody>`
-    const tableContent = pageInfoArray.map((e) => `<tr><td>Day ${e.day}</td><td><a href="/${e.path}">${e.title}</a></td><td>${e.prompt}</td></tr>`).join("");
+    const tableContent = pageInfoArray.map((e) => `<tr><td>Day ${e.day}</td><td><a href="/challenge-123/${e.path}">${e.title}</a></td><td>${e.prompt}</td></tr>`).join("");
     const tableEnd = `</tbody></table>`;
 
     const table = tableStart + tableContent + tableEnd;
