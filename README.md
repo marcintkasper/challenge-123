@@ -2,7 +2,7 @@
 
 I create a static page every day for 123 days. 
 
-<a href="marcintkasper.github.io/challenge-123">marcintkasper.github.io/challenge-123</a>
+<a href="https://marcintkasper.github.io/challenge-123">https://marcintkasper.github.io/challenge-123</a>
 
 ## Approach
 
