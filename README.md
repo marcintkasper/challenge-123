@@ -27,6 +27,6 @@ This is a node environment created with yarn. I am using "yarn run" scripts to b
 
 The `/src` folder contains the source code for the sites.
 
-The `/build` folder contains the resulting site for Github Pages.
+The `/docs` folder contains the resulting site for Github Pages.
 
 The `/scripts` folder contains the yarn build script(s).

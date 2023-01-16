@@ -9,7 +9,7 @@ const getPageDirectories = async () => {
 }
 
 const getExistingPageDirectories = async () => {
-    const allFiles = await fs.readdir(path.join("build"));
+    const allFiles = await fs.readdir(path.join("docs"));
     result = allFiles.filter((e) => e.includes("day"))
     return result;
 }
@@ -50,11 +50,11 @@ const genHomePageWithLinks = async () => {
 
 const buildHomePage = async () => {
     
-    await fs.copyFile(path.join("src", "home", "stylesheet.css"), path.join("build", "stylesheet.css"));
-    await fs.copyFile(path.join("src", "home", "script.js"), path.join("build", "script.js"));
+    await fs.copyFile(path.join("src", "home", "stylesheet.css"), path.join("docs", "stylesheet.css"));
+    await fs.copyFile(path.join("src", "home", "script.js"), path.join("docs", "script.js"));
 
     const indexPageContent = await genHomePageWithLinks();
-    await fs.writeFile(path.join("build", "index.html"), indexPageContent);
+    await fs.writeFile(path.join("docs", "index.html"), indexPageContent);
 
     console.log("Built home page");
 
@@ -72,10 +72,10 @@ const copyOverNewPages = async () => {
     
     await Promise.all(newPages.map(async (e) => {
         const fileList = await fs.readdir(path.join("src", "pages", e));
-        await fs.mkdir(path.join("build", e));
+        await fs.mkdir(path.join("docs", e));
         console.log("created " + e);
         await Promise.all(fileList.map(async (f) => {
-            await fs.copyFile(path.join("src", "pages", e, f), path.join("build", e, f));
+            await fs.copyFile(path.join("src", "pages", e, f), path.join("docs", e, f));
             console.log("created " + e + "/" + f);
         }))
     }))
